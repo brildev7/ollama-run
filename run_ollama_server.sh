@@ -3,6 +3,10 @@
 # Script to manage the Ollama server
 
 export OLLAMA_MODELS="/data/ollama/models"
+export OLLAMA_MAX_LOADED_MODELS=4
+export OLLAMA_NUM_PARALLEL=10
+export OLLAMA_DEBUG=1
+export OLLAMA_TMPDIR="/data/ollama/tmp"
 
 LOG_FILE="/data/ollama/server.log"
 PID_FILE="/data/ollama/ollama.pid"
@@ -10,7 +14,6 @@ PID_FILE="/data/ollama/ollama.pid"
 # Allow overriding host and port via environment variables
 OLLAMA_HOST=${OLLAMA_HOST:-0.0.0.0}
 OLLAMA_PORT=${OLLAMA_PORT:-15119} # Use a non-default port to avoid conflicts
-
 OLLAMA_COMMAND="env OLLAMA_HOST=${OLLAMA_HOST} OLLAMA_PORT=${OLLAMA_PORT} CUDA_VISIBLE_DEVICES=0 ollama serve"
 
 # Function to start the server
