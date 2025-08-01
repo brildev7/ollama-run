@@ -2,6 +2,8 @@
 
 # Script to manage the Ollama server
 
+export OLLAMA_MODELS="/data/ollama/models"
+
 LOG_FILE="/data/ollama/server.log"
 PID_FILE="/data/ollama/ollama.pid"
 
