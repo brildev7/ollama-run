@@ -9,12 +9,12 @@ export OLLAMA_DEBUG=1
 export OLLAMA_TMPDIR="/data/ollama/tmp"
 export OLLAMA_KEEP_ALIVE=-1
 
-LOG_FILE="/data/ollama/server.log"
-PID_FILE="/data/ollama/server.pid"
+LOG_FILE="/data/ollama/server2.log"
+PID_FILE="/data/ollama/server2.pid"
 
 # Allow overriding host and port via environment variables
-export OLLAMA_HOST="0.0.0.0:15119"
-OLLAMA_COMMAND="env CUDA_VISIBLE_DEVICES=0 ollama serve"
+export OLLAMA_HOST="0.0.0.0:15118"
+OLLAMA_COMMAND="env CUDA_VISIBLE_DEVICES=1 ollama serve"
 
 # Function to start the server
 start() {
